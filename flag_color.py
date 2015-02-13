@@ -8,8 +8,8 @@ class FlagColor(QtGui.QColor):
 
     """ Make Superclass """
 
-    def __init__(self,country):
-        QtGui.QColor.__init__(self)
+    def __init__(self, country):
+        super(QtGui.QColor).__init__(self)
 
 
     def randomColor(self):
