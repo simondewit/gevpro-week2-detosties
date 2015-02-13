@@ -13,6 +13,3 @@ class FlagColor(QtGui.QColor):
 
 
     def randomColor(self):
-
-
-if __name__ == "__main__":  
