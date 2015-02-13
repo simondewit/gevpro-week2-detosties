@@ -1,8 +1,8 @@
 #!/opt/local/bin/python3.4
 # Jarik Oosting, 13-02-2015
 
-import sys
 from PyQt4 import QtGui, QtColor
+from random import randrange
 
 class FlagColor(QtGui.QColor):
 
@@ -13,4 +13,16 @@ class FlagColor(QtGui.QColor):
 
 
     def randomColor(self):
-        print("hoi")
+
+        # Set Blue color
+        randomBlue = randrange(256)
+        self.setBlue(randomBlue)
+
+        # Set Red color
+        randomRed = randrange(256)
+        self.setRed(randomRed)
+
+        # Set Green color
+        randomGreen = randrange(256)
+        self.setGreen(randomGreen)
+
