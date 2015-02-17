@@ -11,5 +11,5 @@ def makeCountries():
     with open("countries_list.txt") as in_f:
         for line in in_f:
             countries.append(line.strip())
-            countries_obj.append(Country(line.strip(), FlagColor()))
+            countries_obj.append(Country(line.strip(), FlagColor().setColor()))
     return countries, countries_obj
