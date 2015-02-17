@@ -36,7 +36,7 @@ class Flags(QtGui.QWidget):
         self.square = QtGui.QFrame(self)
         self.square.setGeometry(20, 65, 200, 200)
         self.square.setStyleSheet("QWidget { background-color: %s }" %
-                                self.c_obj_list[self.c1.currentIndex()].getColor())
+                                  self.c_obj_list[self.c1.currentIndex()].getColor())
 
         self.show()
 
