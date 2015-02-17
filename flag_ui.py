@@ -19,20 +19,17 @@ class Flags(QtGui.QWidget):
 
         self.setWindowTitle("Country Flags")
 
-        # Set grid layout
-        grid = QtGui.QGridLayout()
-        self.setLayout(grid)
-
         # Make QComboBox with countries
         self.c1 = QtGui.QComboBox(self)
         self.c1.addItems(self.c_list)
-        grid.addWidget(self.c1, 1, 0)
+        self.c1.setGeometry(20, 20, 200, 25)
         self.c1.setCurrentIndex(13)
         self.c1.currentIndexChanged.connect(self.updateUI)
 
         # Make QFrame for displaying the flag
         self.square = QtGui.QFrame(self)
-        self.square.setGeometry(150, 20, 100, 100)
+        self.square.setGeometry(20, 65, 200, 200)
+        self.square.setStyleSheet("background-color: grey")
         self.show()
 
     def updateUI(self):
