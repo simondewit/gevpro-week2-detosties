@@ -23,22 +23,22 @@ class Flags(QtGui.QWidget):
         self.c1 = QtGui.QComboBox(self)
         self.c1.addItems(self.c_list)
         self.c1.setGeometry(20, 20, 200, 25)
-        self.c1.setCurrentIndex(13)
+        self.c1.setCurrentIndex(0)
         self.c1.currentIndexChanged.connect(self.updateUI)
 
         # Make QFrame for displaying the flag
         self.square = QtGui.QFrame(self)
         self.square.setGeometry(20, 65, 200, 200)
-        self.square.setStyleSheet("background-color: grey")
+        self.square.setStyleSheet("QWidget { background-color: %s }" % self.c_obj_list[self.c1.currentIndex()].getColor())
+
         self.show()
 
     def updateUI(self):
         """
         Updates the flag.
         """
-        land = self.c_obj_list[self.c1.currentIndex()]
-        color = land.getColor()
-        self.square.setStyleSheet("QWidget { background-color: %s }" % color)
+        # Get the color from the corresponding country object in the list
+        self.square.setStyleSheet("QWidget { background-color: %s }" % self.c_obj_list[self.c1.currentIndex()].getColor())
 
 
 
