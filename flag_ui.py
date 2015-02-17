@@ -10,11 +10,16 @@ from PyQt4 import QtCore, QtGui
 
 class Flags(QtGui.QWidget):
     def __init__(self):
+        """
+        Constructs a Flag object
+        """
         super(Flags, self).__init__()
         self.initUI()
 
     def initUI(self):
-
+        """
+        Constructs the UI with a QComboBox, and a QFrame.
+        """
         self.c_list, self.c_obj_list = makeCountries()
 
         self.setWindowTitle("Country Flags")
@@ -35,12 +40,10 @@ class Flags(QtGui.QWidget):
 
     def updateUI(self):
         """
-        Updates the flag.
+        Updates the flag color.
         """
         # Get the color from the corresponding country object in the list
         self.square.setStyleSheet("QWidget { background-color: %s }" % self.c_obj_list[self.c1.currentIndex()].getColor())
-
-
 
 
 def main():
