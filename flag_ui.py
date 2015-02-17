@@ -33,6 +33,7 @@ class Flags(QtGui.QWidget):
         # Make QFrame for displaying the flag
         self.square = QtGui.QFrame(self)
         self.square.setGeometry(150, 20, 100, 100)
+        self.show()
 
     def updateUI(self):
         """
