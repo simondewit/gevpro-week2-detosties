@@ -15,6 +15,10 @@ class FlagColor(QtGui.QColor):
 
     def initUI(self):
 
+        self.color = QtGui.QColor(0, 0, 0)
+
+    def setColor(self):
+
         # Set Blue color
         self.randomBlue = randrange(256)
 
@@ -24,9 +28,11 @@ class FlagColor(QtGui.QColor):
         # Set Green color
         self.randomGreen = randrange(256)
 
-        firstPart = setBlue(self.randomBlue)
-        secondPart = setRed(self.randomRed)
-        thirdPart = setGreen(self.randomGreen)
+        self.color.setBlue(self.randomBlue)
+        self.color.setRed(self.randomRed)
+        self.color.setGreen(self.randomGreen)
+
+        return self.color.name()
 
 if __name__ == "__main__":
     app = FlagColor()
