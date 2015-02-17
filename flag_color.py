@@ -18,14 +18,12 @@ class FlagColor(QtGui.QColor):
         """
         Set the color for the flags
         """
-
         self.color = QtGui.QColor(0, 0, 0)
 
     def setColor(self):
         """
         Set and return the new color of the flag
         """
-
         # Set Blue color
         self.randomBlue = randrange(256)
 
