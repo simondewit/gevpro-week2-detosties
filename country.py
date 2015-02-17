@@ -3,12 +3,12 @@
 
 
 class Country():
-    def __init__(self, name, colour):
+    def __init__(self, name, color):
         """
         Creates a Country object with 'name' as name.
         """
         self.name = name
-        self.colour = colour
+        self.color = color
 
     def getName(self):
         """
@@ -16,11 +16,11 @@ class Country():
         """
         return self.name
 
-    def getColour(self):
+    def getColor(self):
         """
         Returns the color name of the Country object.
         """
-        return self.colour
+        return self.color
 
     def __str__(self):
         return "{}{}".format("Hello from ", self.name)
