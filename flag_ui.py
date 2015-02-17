@@ -14,6 +14,7 @@ class Flags(QtGui.QWidget):
         Constructs a Flag object
         """
         super(Flags, self).__init__()
+
         self.initUI()
 
     def initUI(self):
@@ -34,7 +35,8 @@ class Flags(QtGui.QWidget):
         # Make QFrame for displaying the flag
         self.square = QtGui.QFrame(self)
         self.square.setGeometry(20, 65, 200, 200)
-        self.square.setStyleSheet("QWidget { background-color: %s }" % self.c_obj_list[self.c1.currentIndex()].getColor())
+        self.square.setStyleSheet("QWidget { background-color: %s }" %
+                                self.c_obj_list[self.c1.currentIndex()].getColor())
 
         self.show()
 
@@ -43,14 +45,13 @@ class Flags(QtGui.QWidget):
         Updates the flag color.
         """
         # Get the color from the corresponding country object in the list
-        self.square.setStyleSheet("QWidget { background-color: %s }" % self.c_obj_list[self.c1.currentIndex()].getColor())
-
+        self.square.setStyleSheet("QWidget { background-color: %s }" %
+                                  self.c_obj_list[self.c1.currentIndex()].getColor())
 
 def main():
     app = QtGui.QApplication(sys.argv)
     f = Flags()
     app.exec_()
-
 
 if __name__ == '__main__':
     main()
