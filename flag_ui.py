@@ -13,7 +13,7 @@ class Flags(QtGui.QWidget):
         super(Flags, self).__init__()
         self.initUI()
 
-    def iniUI(self):
+    def initUI(self):
 
         self.c_list, self.c_obj_list = makeCountries()
 
