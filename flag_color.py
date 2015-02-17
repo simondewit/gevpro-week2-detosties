@@ -5,8 +5,9 @@ from PyQt4 import QtGui
 from random import randrange
 
 class FlagColor(QtGui.QColor):
-
-    """ Make Superclass """
+    """
+    Make Superclass
+    """
 
     def __init__(self):
         QtGui.QColor.__init__(self)
@@ -14,10 +15,16 @@ class FlagColor(QtGui.QColor):
         self.initUI()
 
     def initUI(self):
+        """
+        Set the color for the flags
+        """
 
         self.color = QtGui.QColor(0, 0, 0)
 
     def setColor(self):
+        """
+        Set and return the new color of the flag
+        """
 
         # Set Blue color
         self.randomBlue = randrange(256)
